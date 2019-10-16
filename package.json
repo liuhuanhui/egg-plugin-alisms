@@ -1,0 +1,56 @@
+{
+  "name": "egg-plugin-alisms",
+  "version": "0.0.1",
+  "description": "egg plugin alisms by typescript",
+  "eggPlugin": {
+    "name": "alisms"
+  },
+  "scripts": {
+    "tsc": "npm run clean && ets -o && tsc -p tsconfig.json",
+    "test": "npm run tsc && egg-bin test",
+    "cov": "npm run tsc && egg-bin cov",
+    "ci": "npm run cov",
+    "clean": "del './{app,lib,config,test,typings}/**/*.{js,d.ts}'",
+    "prepublish": "npm run tsc"
+  },
+  "keywords": [
+    "egg",
+    "eggPlugin",
+    "egg-plugin",
+    "egg-ali",
+    "egg-alisms",
+    "alisms"
+  ],
+  "types": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuhuanhui/egg-plugin-alisms.git"
+  },
+  "author": "liuhuanhui <543800057@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liuhuanhui/egg-plugin-alisms.git/issues"
+  },
+  "homepage": "https://github.com/liuhuanhui/egg-plugin-alisms.git#readme",
+  "devDependencies": {
+    "@types/mocha": "^5.2.7",
+    "del-cli": "^2.0.0",
+    "egg": "^2.22.2",
+    "egg-bin": "^4.13.0",
+    "egg-mock": "^3.23.1",
+    "tslint": "^5.18.0",
+    "tslint-config-egg": "^1.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://github.com/liuhuanhui/egg-plugin-alisms.git"
+  },
+  "files": [
+    "app",
+    "config",
+    "typings",
+    "index.d.ts"
+  ],
+  "dependencies": {
+    "@alicloud/pop-core": "^1.7.7"
+  }
+}
