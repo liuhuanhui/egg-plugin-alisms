@@ -1,6 +1,6 @@
 {
   "name": "egg-plugin-alisms",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "egg plugin alisms by typescript",
   "eggPlugin": {
     "name": "alisms"
@@ -21,7 +21,7 @@
     "egg-alisms",
     "alisms"
   ],
-  "types": "index.d.ts",
+  "types": "app.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/liuhuanhui/egg-plugin-alisms.git"
@@ -42,13 +42,14 @@
     "tslint-config-egg": "^1.0.0"
   },
   "publishConfig": {
-    "registry": "https://github.com/liuhuanhui/egg-plugin-alisms.git"
   },
   "files": [
     "app",
+    "lib",
+    "app.js",
     "config",
     "typings",
-    "index.d.ts"
+    "app.d.ts"
   ],
   "dependencies": {
     "@alicloud/pop-core": "^1.7.7"
