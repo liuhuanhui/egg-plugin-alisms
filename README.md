@@ -1,12 +1,11 @@
 # egg-plugin-alisms
-
 ## Usage
 
 ```
 $ npm install egg-plugin-alisms
 ```
 
-add to plugin
+#### add to plugin
 
 ```typescript
 // config/plugin.ts
@@ -37,4 +36,37 @@ exports.alisms = {
     },
   },
 };
+```
+
+#### 单条发送 
+##### * 备注：手机号允许传入 string,number,string[]，传入数组可发送至多个手机号
+``` ts
+ctx.alisms.login('手机号', {
+  // 模版变量
+})
+```
+``` ts
+ctx.alisms.register('手机号', {
+  // 模版变量
+})
+```
+#### 批量发送
+``` ts
+ctx.alisms.batch.login([
+  {
+    phonenum: '手机号',
+    vars: {
+      // 模版变量
+    },
+    signName: '', // 签名 不填写 默认使用全局默认配置签名
+  },
+   {
+     // ...
+   }
+])
+```
+#### contact
+``` js
+alert('https://gitee.com/liuhuanhui');
+alert('543800057@qq.com')
 ```
